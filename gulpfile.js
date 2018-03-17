@@ -65,21 +65,3 @@ gulp.task("js-inline", () => {
         .pipe($.filter("**/*.js"))
         .pipe($.livereload());
 });
-
-// Process data in an array synchronously, moving onto the n+1 item only after the nth item callback
-function doSynchronousLoop(data, processData, done) {
-    if (data.length > 0) {
-        const loop = (data, i, processData, done) => {
-            processData(data[i], i, () => {
-                if (++i < data.length) {
-                    loop(data, i, processData, done);
-                } else {
-                    done();
-                }
-            });
-        };
-        loop(data, 0, processData, done);
-    } else {
-        done();
-    }
-}

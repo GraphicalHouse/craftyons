@@ -42,3 +42,15 @@ Run `valet link && valet secure && gulp && valet open`
 
 ## Working Notes
 Run `chmod 770 craftyons-setup` to get the script to run from the command line
+
+Need to automate the first Tachyons compile
+`cd node_modules/tachyons-custom && npm install && npm start`
+
+And then move the resulting css file to /src/css
+`cp node_modules/tachyons-custom/css/tachyons.css src/css`
+
+Both of the above in one command eeeeek
+`cd node_modules/tachyons-custom && npm install && npm start && quit`
+
+Or even better
+`cd node_modules/tachyons-custom && npm install && npm run build:css && cp css/tachyons.css ../../src/css && cd ../../ && ls && echo Tachyons moved to src folder, now launching website && valet open`
