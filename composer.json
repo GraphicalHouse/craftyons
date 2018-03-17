@@ -45,7 +45,7 @@
       "@php craft setup/welcome",
       "@php craftyons-setup welcome",
       "npm install",
-      "say -v Fiona Nice wan pal, Craftee-onns has been installed"
+      "say -v Fiona Nice wan pal, Craftee-onns has been installed",
       "echo Now run './craft' from your project directory to configure Craft"
     ],
     "post-update-cmd": [
