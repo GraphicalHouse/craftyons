@@ -1,5 +1,5 @@
 {
-  "name": "GraphicalHouse/craftyons",
+  "name": "graphicalhouse/craftyons",
   "description": "Craft CMS + Tachyons",
   "keywords": [
     "craft",
@@ -43,7 +43,9 @@
     ],
     "post-create-project-cmd": [
       "@php craft setup/welcome",
-      "@php craftyons-setup welcome"
+      "@php craftyons-setup welcome",
+      "npm install",
+      "say -v Fiona Nice wan pal, Craftee-onns has been installed"
     ]
   }
 }

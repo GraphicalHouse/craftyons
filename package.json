@@ -5,11 +5,11 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GraphicalHouse/todd-duncan.git"
+    "url": "git+https://github.com/GraphicalHouse/CLIETNAME_GIT.git"
   },
   "author": "Graphical House",
   "bugs": {
-    "url": "https://github.com/GraphicalHouse/todd-duncan/issues"
+    "url": "https://github.com/GraphicalHouse/CLIETNAME_GIT/issues"
   },
   "paths": {
     "src": {
@@ -25,15 +25,15 @@
     "templates": "./templates/"
   },
   "urls": {
-    "live": "https://todd-duncan.co.uk/",
-    "staging": "https://todd-duncan.graphicalhouse.co.uk",
-    "local": "https://todd-duncan.dev"
+    "live": "https://CLIENT_URL",
+    "staging": "https://CLIENT_STAGING",
+    "local": "https://CLIENT_DEV"
   },
   "vars": {
     "finalcssfile": "style.min.css",
     "cssfile": "style.css"
   },
-  "homepage": "https://github.com/GraphicalHouse/todd-duncan#readme",
+  "homepage": "https://github.com/GraphicalHouse/CLIETNAME_GIT#readme",
   "dependencies": {
     "animate.css": "^3.6.1",
     "tachyons-custom": "^4.9.4"
