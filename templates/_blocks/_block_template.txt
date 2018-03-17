@@ -1,0 +1,12 @@
+<!-- BLOCK NAME -->
+{# Notes
+ — List of helpful pointers
+ - Note of any third-party dependencies, eg Craft plugins
+ - Anything else that will help make sense of things in a year's time
+#}
+
+{# Block Options #}
+
+{# Component Settings #}
+
+{# Component Output #}

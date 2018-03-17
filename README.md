@@ -1,6 +1,8 @@
 # CLIETNAME
 A Craft CMS and Tachyons website for CLIENTNAME by Graphical House
 
+Run `composer create-project graphicalhouse/craftyons PROJECTNAMEHERE -s RC` from your Repos folder to get started
+
 ----
 
 ## Requirements
@@ -14,20 +16,11 @@ This package assumes you have the following installed:
 
 ## Installation
 
-### 1) Craft Setup
-Run `composer install` (TODO: are there other steps?)
+### 1) Craftyons Setup
+Run `composer create-project graphicalhouse/craftyons PROJECTNAMEHERE -s RC` from your Repos folder, and follow the instructions
 
-### 2) npm Setup
-Run `npm install` from the root directory
-
-### 3) Import the latest mySQL dump locally
+### 2) Import the latest mySQL dump locally
 https://www.sequelpro.com/ is a nice solution for this on a Mac
-
-### 4) Create a `.env` file in the root directory
-Todo
-
-### 5) And your local DB config details to the `.env` file
-Todo
 
 ----
 
@@ -42,4 +35,4 @@ Todo
 ----
 
 ## Working Notes
-Need to run `chmod 770 craftyons-setup` to get the script to run from the command line
+Run `chmod 770 craftyons-setup` to get the script to run from the command line
