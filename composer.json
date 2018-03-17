@@ -46,7 +46,7 @@
       "say -v Fiona Nice wan pal, Craftee-onns has been installed",
       "echo ***IMPORTANT*** Now run './craft setup' from your project directory to configure Craft",
       "@php craft setup/welcome",
-      "@php craftyons-setup welcome",
+      "@php craftyons-setup welcome"
     ],
     "post-update-cmd": [
       "@php craftyons-setup update"
