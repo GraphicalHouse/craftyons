@@ -1,7 +1,8 @@
 # CLIETNAME
 A Craft CMS and Tachyons website for CLIENTNAME by Graphical House
 
-Run `composer create-project graphicalhouse/craftyons PROJECTNAMEHERE -s RC` from your Repos folder to get started
+1) Create a new project folder in your `Repos/` directory (Note: Craftyons will use this folder name as the site path for Valet, you can always change it later)
+2) In Terminal, CD to the project folder and run `composer create-project graphicalhouse/craftyons . -s RC` to get started
 
 ----
 
