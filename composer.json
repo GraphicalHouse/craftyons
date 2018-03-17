@@ -42,11 +42,11 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-create-project-cmd": [
-      "@php craft setup/welcome",
-      "@php craftyons-setup welcome",
       "npm install",
       "say -v Fiona Nice wan pal, Craftee-onns has been installed",
-      "echo Now run './craft setup' from your project directory to configure Craft"
+      "echo ***IMPORTANT*** Now run './craft setup' from your project directory to configure Craft",
+      "@php craft setup/welcome",
+      "@php craftyons-setup welcome",
     ],
     "post-update-cmd": [
       "@php craftyons-setup update"

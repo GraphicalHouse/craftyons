@@ -16,11 +16,17 @@ This package assumes you have the following installed:
 
 ## Installation
 
-### 1) Craftyons Setup
+### 1) Initial Craftyons Setup
 Run `composer create-project graphicalhouse/craftyons PROJECTNAMEHERE -s RC` from your Repos folder, and follow the instructions
 
-### 2) Import the latest mySQL dump locally
-https://www.sequelpro.com/ is a nice solution for this on a Mac
+### 2) Craft Setup (eventually this will be scripted via step 1)
+Run `./craft setup` from your project folder
+
+### 3) Craftyons Setup (eventually this will be scripted via step #1)
+Run `./craftyons-setup welcome` from your project folder
+
+### 4) Link your project folder with Valet, secure it, and open
+Run `valet link && valet secure && gulp && valet open`
 
 ----
 
