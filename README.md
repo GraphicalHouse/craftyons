@@ -1,5 +1,5 @@
 # CLIETNAME
-A Craft CMS and Tachyons website by Graphical House
+A Craft CMS and Tachyons website for CLIENTNAME by Graphical House
 
 ----
 
@@ -38,3 +38,8 @@ Todo
 ----
 
 ## Resources
+
+----
+
+## Working Notes
+Need to run `chmod 770 craftyons-setup` to get the script to run from the command line
