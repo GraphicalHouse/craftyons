@@ -1,0 +1,50 @@
+{
+  "name": "craftyons",
+  "version": "1.0.0",
+  "description": "A Craft CMS and Tachyons website for CLIENTNAME by Graphical House",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GraphicalHouse/todd-duncan.git"
+  },
+  "author": "Graphical House",
+  "bugs": {
+    "url": "https://github.com/GraphicalHouse/todd-duncan/issues"
+  },
+  "paths": {
+    "src": {
+      "css": "./src/css/",
+      "js": "./src/js/",
+      "img": "./src/img/"
+    },
+    "dist": {
+      "base": "./web/",
+      "css": "./web/css/",
+      "js": "./web/js/"
+    },
+    "templates": "./templates/"
+  },
+  "urls": {
+    "live": "https://todd-duncan.co.uk/",
+    "staging": "https://todd-duncan.graphicalhouse.co.uk",
+    "local": "https://todd-duncan.dev"
+  },
+  "vars": {
+    "finalcssfile": "style.min.css",
+    "cssfile": "style.css"
+  },
+  "homepage": "https://github.com/GraphicalHouse/todd-duncan#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "tachyons-custom": "^4.9.4"
+  },
+  "devDependencies": {
+    "fancy-log": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0"
+  }
+}
