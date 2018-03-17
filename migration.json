@@ -1,0 +1,73 @@
+{
+    "fieldGroups": [
+        "Common"
+    ],
+    "sections": [
+        {
+            "name": "Pages",
+            "handle": "pages",
+            "type": "channel",
+            "enableVersioning": true,
+            "propagateEntries": true,
+            "siteSettings": [
+                {
+                    "hasUrls": "1",
+                    "uriFormat": "{slug}",
+                    "template": "_layout",
+                    "enabledByDefault": true
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "group": "Common",
+            "name": "Aspect Ratio",
+            "handle": "aspectRatio",
+            "instructions": "",
+            "type": "craft\\fields\\Dropdown",
+            "options": [
+                {
+                    "label": "Wide (16x9)",
+                    "value": "aspect-ratio aspect-ratio--16x9",
+                    "default": "1"
+                },
+                {
+                    "label": "Normal (4x3)",
+                    "value": "aspect-ratio aspect-ratio--4x3",
+                    "default": ""
+                },
+                {
+                    "label": "Square (1x1)",
+                    "value": "aspect-ratio aspect-ratio--1x1",
+                    "default": ""
+                }
+            ]
+        },
+        {
+            "group": "Common",
+            "name": "Body",
+            "handle": "body",
+            "instructions": "",
+            "type": "craft\\redactor\\Field",
+            "redactorConfig": "",
+            "purifierConfig": "",
+            "cleanupHtml": "1",
+            "purifyHtml": "1",
+            "columnType": "text",
+            "availableVolumes": "*",
+            "availableTransforms": "*"
+        }
+    ],
+    "entryTypes": [
+        {
+            "sectionHandle": "pages",
+            "name": "Pages",
+            "handle": "pages",
+            "hasTitleField": true,
+            "titleLabel": "Title",
+            "titleFormat": "",
+            "fieldLayout": []
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 # CLIETNAME
-A Craft CMS and Tachyons website by Graphical House.
+A Craft CMS and Tachyons website scaffold for Graphical House projects.
 With thanks to [nystudio107](https://github.com/nystudio107/craft).
 
 1) Create a new project folder in your `Repos/` directory (Note: Craftyons will use this folder name as the site path for Valet, you can always change it later)
@@ -36,6 +36,7 @@ Run `./craftyons-setup welcome` from your project folder
 
 ### 4) Link your project folder with Valet, secure it, and open
 Run `valet link && valet secure && valet open && gulp`
+
 Any CSS added or changed in /src/css will now be minified to /web/css/
 
 ----
@@ -48,6 +49,7 @@ Any CSS added or changed in /src/css will now be minified to /web/css/
 
 ## Resources
 - [A Gulp Workflow for Frontend Development Automation](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation/)
+- [Snippets for Atom that help you quickly generate .json models for CraftCMS. They work really well with the Architect plugin.](https://github.com/Emkaytoo/craft-json-snippets)
 
 ----
 
