@@ -53,4 +53,4 @@ Both of the above in one command eeeeek
 `cd node_modules/tachyons-custom && npm install && npm start && quit`
 
 Or even better
-`cd node_modules/tachyons-custom && npm install && npm run build:css && cp css/tachyons.css ../../src/css && cd ../../ && ls && echo Tachyons moved to src folder, now launching website && valet open`
+`cd node_modules/tachyons-custom && npm install && npm run build:css && cp css/tachyons.css ../../src/css && cd ../../ && ls && echo Tachyons moved to src folder, now launching website && valet link && valet secure && valet open`
