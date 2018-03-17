@@ -1,6 +1,6 @@
 {
   "name": "graphicalhouse/craftyons",
-  "description": "Craft CMS + Tachyons",
+  "description": "Craft CMS + Tachyons website scaffolding with a few choice plugins",
   "keywords": [
     "craft",
     "cms",
@@ -23,6 +23,7 @@
     "craftcms/redactor": "1.0.1",
     "nystudio107/craft3-multi-environment": "^1.0.5",
     "nystudio107/craft-scripts": "^1.2.4",
+    "nystudio107/craft-typogrify": "1.1.8",
     "mmikkel/cp-field-inspect": "1.0.2",
     "vlucas/phpdotenv": "^2.4.0"
   },
