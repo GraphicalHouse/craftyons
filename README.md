@@ -1,20 +1,23 @@
 # CLIETNAME
-A Craft CMS and Tachyons website for CLIENTNAME by Graphical House
+A Craft CMS and Tachyons website by Graphical House.
+With thanks to [nystudio107](https://github.com/nystudio107/craft).
 
 1) Create a new project folder in your `Repos/` directory (Note: Craftyons will use this folder name as the site path for Valet, you can always change it later)
-2) In Terminal, CD to the project folder and run `composer create-project graphicalhouse/craftyons . -s RC` to get started
+
+2) In Terminal, CD to the project folder you just made and run `composer create-project graphicalhouse/craftyons . -s RC` to get started
 
 ----
 
 ## Requirements
 This package assumes you have the following installed:
-- Node.JS and npm
-- Composer
-- Gulp
-- LiveReload for Chrome
+- [Node.JS and npm](https://www.npmjs.com/get-npm)
+- [Composer](https://getcomposer.org/)
+- [Gulp](https://gulpjs.com/)
+- [LiveReload for Chrome](http://livereload.com/extensions/)
 
 ## Assumptions made
-- Gulp is used for workflow automation, with thanks to [nystudio107](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation)
+- You're using a Mac and Laravel Valet as your development environment
+- Gulp is used for workflow automation, again with thanks to [nystudio107](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation)
 - [Tachyons CSS](http://tachyons.io/) is used as a CSS framework
 - [Animate CSS](https://github.com/daneden/animate.css/) is available from the _node_modules_ directory if required
 
@@ -23,26 +26,28 @@ This package assumes you have the following installed:
 ## Installation
 
 ### 1) Initial Craftyons Setup
-Run `composer create-project graphicalhouse/craftyons PROJECTNAMEHERE -s RC` from your Repos folder, and follow the instructions
+Run `composer create-project graphicalhouse/craftyons PROJECTNAME -s RC` from your Repos folder, and follow the instructions.
 
-### 2) Craft Setup (eventually this will be scripted via step 1)
+### 2) Craft Setup
 Run `./craft setup` from your project folder
 
-### 3) Craftyons Setup (eventually this will be scripted via step #1)
+### 3) Craftyons Setup
 Run `./craftyons-setup welcome` from your project folder
 
 ### 4) Link your project folder with Valet, secure it, and open
-Run `valet link && valet secure && gulp && valet open`
+Run `valet link && valet secure && valet open && gulp`
+Any CSS added or changed in /src/css will now be minified to /web/css/
 
 ----
 
 ## Running locally with LiveReload in Chrome
 - Run `gulp` from the root directory
-- Open `https://LOCAL_ROOT_PATH.dev` in Chrome
+- Open `https://PROJECTNAME.dev` in Chrome
 
 ----
 
 ## Resources
+- [A Gulp Workflow for Frontend Development Automation](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation/)
 
 ----
 

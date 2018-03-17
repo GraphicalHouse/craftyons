@@ -1,6 +1,6 @@
 {
   "name": "graphicalhouse/craftyons",
-  "description": "Craft CMS + Tachyons website scaffolding with a few choice plugins",
+  "description": "Craft CMS + Tachyons website scaffolding with a few choice plugins. With thanks to https://github.com/nystudio107/craft",
   "keywords": [
     "craft",
     "cms",
