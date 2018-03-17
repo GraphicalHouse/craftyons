@@ -20,10 +20,10 @@
   },
   "require": {
     "craftcms/cms": "^3.0.0-RC1",
-    "craftcms/redactor": "1.0.1",
+    "craftcms/redactor": "^1.0.1",
     "nystudio107/craft-scripts": "^1.2.4",
-    "nystudio107/craft-typogrify": "1.1.8",
-    "mmikkel/cp-field-inspect": "1.0.2",
+    "nystudio107/craft-typogrify": "^1.1.8",
+    "mmikkel/cp-field-inspect": "^1.0.2",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

@@ -45,7 +45,7 @@ const CRAFT_SCRIPTS_SETUP = [
         'LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"REPLACE_ME"' => [
             'substr'  => '"REPLACE_ME"',
             'env'     => '',
-            'default' => 'web/assets/',
+            'default' => 'web/media/',
         ],
         'LOCAL_DB_NAME="REPLACE_ME"' => [
             'substr'  => '"REPLACE_ME"',
@@ -245,7 +245,7 @@ function setupTachyonsGeneratorandLaunch()
         $result = executeShellCommand($command);
         outputString($result);
     } else {
-        outputString('### unable to show NodeJS packages, npm not found', Console::FG_RED);
+        outputString('### unable to set up Tachyons and launch site, do you have Node and npm installed?', Console::FG_RED);
     }
 }
 

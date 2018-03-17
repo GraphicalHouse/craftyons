@@ -13,6 +13,11 @@ This package assumes you have the following installed:
 - Gulp
 - LiveReload for Chrome
 
+## Assumptions made
+- Gulp is used for workflow automation, with thanks to [nystudio107](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation)
+- [Tachyons CSS](http://tachyons.io/) is used as a CSS framework
+- [Animate CSS](https://github.com/daneden/animate.css/) is available from the _node_modules_ directory if required
+
 ----
 
 ## Installation
