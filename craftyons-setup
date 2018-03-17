@@ -13,7 +13,11 @@ use yii\helpers\Console;
 
 use mikehaertl\shellcommand\Command as ShellCommand;
 
+// const LoadingIndicator = ['braille-pattern-cli-loading-indicator')];
+
 const INSTALL_PLUGINS = [
+    'cp-field-inspect',
+    'redactor',
     'typogrify',
 ];
 
@@ -238,11 +242,13 @@ function setupCraftyons()
     // Set up Craft-Scripts
     setupCraftScripts();
     // Setup Craft 3 Multi-Environment
-    setupCraftMultiEnvironment();
+    // setupCraftMultinstallNodePackagesiEnvironment();
     // Install the default plugins
     installPlugins();
     // Install the NodeJS packages
     installNodePackages();
+    // Show installed NodeJS packages
+    showNodePackages();
     // Say goodbye
     outputString(PHP_EOL.'Setup complete. Have a nice day!', Console::FG_YELLOW);
 }
@@ -315,23 +321,32 @@ function installPlugins()
 
 function installNodePackages()
 {
-    $command = '';
-    if (shellCommandExists('npm')) {
-        $command = 'npm install';
-    }
-    if (shellCommandExists('yarn')) {
-        $command = 'yarn';
-    }
+    $command = 'npm install';
 
-    outputString(PHP_EOL.'Installing NodeJS packages via '.$command. ' (this may take a while)', Console::FG_YELLOW);
+    outputString(PHP_EOL.'Installing NodeJS packages via '.$command. ' (this may take quite some time...)', Console::FG_YELLOW);
 
     if (!empty($command)) {
         $result = executeShellCommand($command);
         outputString($result);
     } else {
-        outputString('### unable to install NodeJS packages, yarn/npm not found', Console::FG_RED);
+        outputString('### unable to install NodeJS packages, npm not found', Console::FG_RED);
     }
 }
+
+function showNodePackages()
+{
+    $command = 'npm list -depth 0';
+
+    outputString(PHP_EOL.'Showing installed NodeJS packages...', Console::FG_YELLOW);
+
+    if (!empty($command)) {
+        $result = executeShellCommand($command);
+        outputString($result);
+    } else {
+        outputString('### unable to show NodeJS packages, npm not found', Console::FG_RED);
+    }
+}
+
 
 /**
  * Output a string to the console, using optional $args to color it, if supported

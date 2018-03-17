@@ -21,7 +21,6 @@
   "require": {
     "craftcms/cms": "^3.0.0-RC1",
     "craftcms/redactor": "1.0.1",
-    "nystudio107/craft3-multi-environment": "^1.0.5",
     "nystudio107/craft-scripts": "^1.2.4",
     "nystudio107/craft-typogrify": "1.1.8",
     "mmikkel/cp-field-inspect": "1.0.2",
@@ -47,6 +46,13 @@
       "@php craftyons-setup welcome",
       "npm install",
       "say -v Fiona Nice wan pal, Craftee-onns has been installed"
+      "echo Now run './craft' from your project directory to configure Craft"
+    ],
+    "post-update-cmd": [
+      "@php craftyons-setup update"
+    ],
+    "post-install-cmd": [
+      "@php craftyons-setup update"
     ]
   }
 }
