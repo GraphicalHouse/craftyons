@@ -9,14 +9,14 @@ With thanks to [nystudio107](https://github.com/nystudio107/craft).
 ----
 
 ## Requirements
-This package assumes you have the following installed:
+This package assumes you are using a Mac and have the following installed:
+- [Larvel Valet](https://laravel.com/docs/5.5/valet)
 - [Node.JS and npm](https://www.npmjs.com/get-npm)
 - [Composer](https://getcomposer.org/)
 - [Gulp](https://gulpjs.com/)
 - [LiveReload for Chrome](http://livereload.com/extensions/)
 
 ## Assumptions made
-- You're using a Mac and Laravel Valet as your development environment
 - Gulp is used for workflow automation, again with thanks to [nystudio107](https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation)
 - [Tachyons CSS](http://tachyons.io/) is used as a CSS framework
 - [Animate CSS](https://github.com/daneden/animate.css/) is available from the _node_modules_ directory if required
@@ -57,15 +57,3 @@ Any CSS added or changed to /src/css will now be minified to /web/css/
 
 ## Working Notes
 Run `chmod 770 craftyons-setup` to get the script to run from the command line
-
-Need to automate the first Tachyons compile
-`cd node_modules/tachyons-custom && npm install && npm start`
-
-And then move the resulting css file to /src/css
-`cp node_modules/tachyons-custom/css/tachyons.css src/css`
-
-Both of the above in one command eeeeek
-`cd node_modules/tachyons-custom && npm install && npm start && quit`
-
-Or even better
-`cd node_modules/tachyons-custom && npm install && npm run build:css && cp css/tachyons.css ../../src/css && cd ../../ && ls && echo Tachyons moved to src folder, now launching website && valet link && valet secure && valet open`
