@@ -2,7 +2,7 @@
 A Craft CMS and Tachyons website scaffold for Graphical House projects.
 With thanks to [nystudio107](https://github.com/nystudio107/craft).
 
-1) Create a new project folder in your `Repos/` directory or your perferred location. (***Note*** Craftyons will use this folder name as the site path for Valet -  you can always change it later)
+1) Create a new project folder in your `Repos/` directory or your preferred location. (***Note*** Craftyons will use this folder name as the site path for Valet -  you can always change it later)
 
 2) In Terminal, CD to the project folder you just made and run `composer create-project graphicalhouse/craftyons . -s RC` to get started
 

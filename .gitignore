@@ -3,3 +3,4 @@ vendor/
 /.env
 /.env.sh
 .DS_Store
+/scripts
