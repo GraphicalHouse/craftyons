@@ -45,6 +45,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-plumber": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "commander": "^2.15.0",
+    "minimal-prompt": "^1.0.5",
+    "mysql": "^2.15.0",
+    "node-run-cmd": "^1.0.1",
+    "ora": "^2.0.0"
   }
 }
