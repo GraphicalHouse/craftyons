@@ -19,6 +19,7 @@ const INSTALL_PLUGINS = [
     'cp-field-inspect',
     'redactor',
     'typogrify',
+    'architect',
 ];
 
 const CRAFT_SCRIPTS_SETUP = [
@@ -245,7 +246,7 @@ function setupTachyonsGeneratorandLaunch()
         $result = executeShellCommand($command);
         outputString($result);
     } else {
-        outputString('### unable to set up Tachyons and launch site, do you have Node and npm installed?', Console::FG_RED);
+        outputString('### Sorry, unable to set up Tachyons and launch site, do you have Node and npm installed?', Console::FG_RED);
     }
 }
 
