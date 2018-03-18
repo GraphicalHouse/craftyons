@@ -141,7 +141,7 @@ function updateCraftyons()
     // Set up Craft-Scripts
     setupCraftScripts();
     // Say goodbye
-    outputString(PHP_EOL.'Update complete. Have a nice day!', Console::FG_YELLOW);
+    outputString(PHP_EOL.'Update complete. ', Console::FG_YELLOW);
 }
 
 /**

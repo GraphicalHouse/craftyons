@@ -34,7 +34,7 @@ const craftInstallPrompt = function() {
 };
 
 spinner.start();
-cmd.run('composer create-project graphicalhouse/craftyons:1.0.2 craftyons',
+cmd.run('composer create-project graphicalhouse/craftyons:1.0.3 craftyons',
 	{ onDone: craftInstallPrompt }
 );
 
