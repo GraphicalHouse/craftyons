@@ -35,9 +35,9 @@ prompt.question(['Client name', 'Client URL', 'Database name', 'Database passwor
         // console.log("Connected!");
         con.query("CREATE DATABASE " + dbName);
   			// cmd.run('mysql -u root -p ' + dbName + ' < craftyons/database.sql')
-  			log(chalk.blue('Now run the command below to import the Craftyons db dump into ' + dbName + ':'));
+  			log(chalk.blue('Now run the command below to import the Craftyons database into ' + dbName + ':'));
   			log(chalk.blue('[You will be prompted to enter MySQL\'s root user password again, derp]'));
-  			log(chalk.red('mysql -u root -p ' + dbName + ' < craftyons/database.sql && craftyons/npm install && craftyons/valet link && craftyons/valet secure && craftyons/valet open && gulp'));
+  			log(chalk.red('mysql -u root -p ' + dbName + ' < database.sql && valet link && valet secure && valet open && gulp'));
       });
       // console.log(chalk.bgCyan('Database name:', results.databaseUsername));
       // console.log(chalk.bgCyan('Client name:', results.clientName));

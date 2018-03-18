@@ -44,8 +44,8 @@
     ],
     "post-create-project-cmd": [
       "npm install",
-      "say -v Fiona Nice wan pal, Craftee-onns has been installed",
-      "node crafyons.js"
+      "say -v Fiona Nice wan pal, Craftee-onns has been downloaded, starting installation",
+      "node installCraftyons.js"
     ],
     "post-update-cmd": [
       "@php craftyons-setup update"
