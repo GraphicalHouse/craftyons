@@ -4,16 +4,18 @@
 const ora = require('ora');
 const chalk = require('chalk');
 const nrc = require('chalk');
-const log = console.log;
-const rule = chalk.blue('\n------------------');
 const cmd = require('node-run-cmd');
 const mysql = require('mysql');
+const fs = require('fs');
+const prompt = require('minimal-prompt');
+
 const spinner = ora('Downloading Craftyons... this will take a few minutes\n');
+const log = console.log;
+const rule = chalk.blue('\n------------------');
 
 var dbName;
 var dbPassword;
 var devUrl;
-var prompt = require('minimal-prompt');
 
 prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database password'], {
     prompt: '>',
@@ -36,6 +38,8 @@ prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database pas
         // if (err) throw err;
         // console.log("Connected!");
         con.query("CREATE DATABASE " + dbName);
+        // readWriteAsync();
+        readWriteSync();
   			// cmd.run('mysql -u root -p ' + dbName + ' < craftyons/database.sql')
   			log(chalk.blue('Now run the command below to import the Craftyons database into ' + dbName + ':'));
   			log(chalk.bgBlue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + dbPassword));
@@ -50,6 +54,28 @@ prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database pas
 
 // Start the prompting process.
 prompt.start();
+
+
+// function readWriteAsync() {
+//   fs.readFile('filelist.txt', 'utf-8', function(err, data){
+//     if (err) throw err;
+//
+//     var newValue = data.replace(/^\./gim, 'myString');
+//
+//     fs.writeFile('filelistAsync.txt', newValue, 'utf-8', function (err) {
+//       if (err) throw err;
+//       console.log('filelistAsync complete');
+//     });
+//   });
+// }
+
+function readWriteSync() {
+  var data = fs.readFileSync('.env', 'utf-8');
+  var dbPasswordString = 'DB_PASSWORD="' + dbPassword +'"';
+  var newValue = data.replace('DB_PASSWORD=""', dbPasswordString);
+  fs.writeFileSync('filelistSync.txt', newValue, 'utf-8');
+  console.log('readFileSync complete');
+}
 
 // var dataCallback = function(data) {
 //   log(data);
