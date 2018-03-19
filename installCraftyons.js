@@ -40,6 +40,7 @@ prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database pas
   			log(chalk.blue('Now run the command below to import the Craftyons database into ' + dbName + ':'));
   			log(chalk.bgBlue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + dbPassword));
   			log(chalk.red('mysql -u root -p ' + dbName + ' < database.sql && valet link && valet secure && valet open && gulp'));
+        cmd.run('say -v Fiona After you run the mysequel command, remember to add the correct database variables in the dot env file, aye?')
       });
       // console.log(chalk.bgCyan('Database name:', results.databaseUsername));
       // console.log(chalk.bgCyan('Client name:', results.clientName));
