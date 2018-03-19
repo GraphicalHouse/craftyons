@@ -13,11 +13,13 @@ const spinner = ora('Downloading Craftyons... this will take a few minutes\n');
 const log = console.log;
 const rule = chalk.blue('\n------------------');
 
-var dbName;
-var dbPassword;
-var devUrl;
+var CraftyonsApp = {}; // Globally scoped object
 
-prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database password'], {
+// var dbName;
+// var dbPassword;
+// var devUrl;
+
+prompt.question(['Client name', 'Local dev url',  'Database name', 'Database password'], {
     prompt: '>',
     delimiter: ':',
     formatPrompt: function(prompt, delim, name) {
@@ -25,26 +27,29 @@ prompt.question(['Client name', 'Local dev URL',  'Database name', 'Database pas
       return prompt + delim + ' ' + name + delim + ' ';
     },
     onComplete: function(results) {
-      var dbName = results.databaseName;
-      var dbPassword = results.localDevUrl;
-      var devUrl = results.databasePassword;
+      CraftyonsApp.dbName = results.databaseName;
+      CraftyonsApp.devUrl = results.localDevUrl;
+      CraftyonsApp.dbPassword = results.databasePassword;
       var con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: dbPassword
+        password: results.databasePassword
       });
       // console.log(dbName);
       con.connect(function(err) {
         // if (err) throw err;
-        // console.log("Connected!");
-        con.query("CREATE DATABASE " + dbName);
+        console.log("Connected to " + results.databaseName);
+        con.query("CREATE DATABASE " + results.databaseName);
         // readWriteAsync();
         readWriteSync();
   			// cmd.run('mysql -u root -p ' + dbName + ' < craftyons/database.sql')
-  			log(chalk.blue('Now run the command below to import the Craftyons database into ' + dbName + ':'));
-  			log(chalk.bgBlue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + dbPassword));
-  			log(chalk.red('mysql -u root -p ' + dbName + ' < database.sql && valet link && valet secure && valet open && gulp'));
-        cmd.run('say -v Fiona After you run the mysequel command, remember to add the correct database variables in the dot env file, aye?')
+        log(rule);
+  			log(chalk.blue('Now run the command below to import the Craftyons database into ' + CraftyonsApp.dbName + ':'));
+  			// log(chalk.blue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + CraftyonsApp.dbPassword));
+  			log(rule);
+  			log(chalk.red('mysql -u root -p ' + CraftyonsApp.dbName + ' < database.sql && valet link ' + CraftyonsApp.devUrl +' && valet secure && valet open && gulp'));
+        cmd.run('Press control C to exit the prompt. Sorry I am not clever enough to do this for you... yet');
+        process.exit();
       });
       // console.log(chalk.bgCyan('Database name:', results.databaseUsername));
       // console.log(chalk.bgCyan('Client name:', results.clientName));
@@ -70,11 +75,18 @@ prompt.start();
 // }
 
 function readWriteSync() {
+  var data = fs.readFileSync('.env.example', 'utf-8');
+  var newPassword = data.replace('DB_PASSWORD=""', 'DB_PASSWORD="' + CraftyonsApp.dbPassword +'"');
+  fs.writeFileSync('.env', newPassword, 'utf-8');
+  console.log('readFileSync1 complete');
+  readWriteSync2();
+}
+
+function readWriteSync2() {
   var data = fs.readFileSync('.env', 'utf-8');
-  var dbPasswordString = 'DB_PASSWORD="' + dbPassword +'"';
-  var newValue = data.replace('DB_PASSWORD=""', dbPasswordString);
-  fs.writeFileSync('filelistSync.txt', newValue, 'utf-8');
-  console.log('readFileSync complete');
+  var newDatabase = data.replace('DB_DATABASE=""', 'DB_DATABASE="' + CraftyonsApp.dbName +'"');
+  fs.writeFileSync('.env', newDatabase, 'utf-8');
+  console.log('readFileSync2 complete');
 }
 
 // var dataCallback = function(data) {
