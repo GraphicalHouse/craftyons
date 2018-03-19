@@ -23,29 +23,11 @@ This package assumes you are using a Mac and have the following installed:
 
 ----
 
-## Installation
-
-### 1) Initial Craftyons Setup
-Run `composer create-project graphicalhouse/craftyons . -s RC` from your desired project folder, and follow the instructions.
-
-### 2) Craft Setup
-Run `./craft setup` from your project folder
-
-### 3) Craftyons Setup
-Run `./craftyons-setup welcome` from your project folder
-
-### 4) Link your project folder with Valet, secure it, and open
-Run `valet link && valet secure && valet open && gulp`
-
-### 5) Enable LiveReload by clicking the dot icon in the top right of Chrome
-The dot will turn solid to show that LiveReload is running.
-Any CSS added or changed to /src/css will now be minified to /web/css/
-
-----
-
 ## Running locally with LiveReload in Chrome
 - Run `gulp` from the project folder
 - Open `https://PROJECTNAME.dev` in Chrome or use `valet open`
+- Enable LiveReload by clicking the dot icon in the top right of Chrome
+- Any CSS added or changed to /src/css will now be minified to /web/css/
 
 ----
 
