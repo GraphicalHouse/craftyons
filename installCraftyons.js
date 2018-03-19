@@ -48,7 +48,6 @@ prompt.question(['Client name', 'Local dev url',  'Database name', 'Database pas
   			// log(chalk.blue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + CraftyonsApp.dbPassword));
   			log(rule);
   			log(chalk.red('mysql -u root -p ' + CraftyonsApp.dbName + ' < database.sql && valet link ' + CraftyonsApp.devUrl +' && valet secure && valet open && gulp'));
-        cmd.run('Press control C to exit the prompt. Sorry I am not clever enough to do this for you... yet');
         process.exit();
       });
       // console.log(chalk.bgCyan('Database name:', results.databaseUsername));
@@ -78,7 +77,7 @@ function readWriteSync() {
   var data = fs.readFileSync('.env.example', 'utf-8');
   var newPassword = data.replace('DB_PASSWORD=""', 'DB_PASSWORD="' + CraftyonsApp.dbPassword +'"');
   fs.writeFileSync('.env', newPassword, 'utf-8');
-  console.log('readFileSync1 complete');
+  console.log('DB_PASSWORD updated');
   readWriteSync2();
 }
 
@@ -86,7 +85,7 @@ function readWriteSync2() {
   var data = fs.readFileSync('.env', 'utf-8');
   var newDatabase = data.replace('DB_DATABASE=""', 'DB_DATABASE="' + CraftyonsApp.dbName +'"');
   fs.writeFileSync('.env', newDatabase, 'utf-8');
-  console.log('readFileSync2 complete');
+  console.log('DB_DATABASE updated');
 }
 
 // var dataCallback = function(data) {
