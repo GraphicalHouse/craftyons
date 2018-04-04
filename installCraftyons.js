@@ -19,7 +19,7 @@ var CraftyonsApp = {}; // Globally scoped object
 // var dbPassword;
 // var devUrl;
 
-prompt.question(['Client name', 'Local dev url',  'Database name', 'Database password'], {
+prompt.question(['Client name', 'Local dev domain',  'Database name', 'Database password'], {
     prompt: '>',
     delimiter: ':',
     formatPrompt: function(prompt, delim, name) {
@@ -28,7 +28,7 @@ prompt.question(['Client name', 'Local dev url',  'Database name', 'Database pas
     },
     onComplete: function(results) {
       CraftyonsApp.dbName = results.databaseName;
-      CraftyonsApp.devUrl = results.localDevUrl;
+      CraftyonsApp.devUrl = results.localDevDomain;
       CraftyonsApp.dbPassword = results.databasePassword;
       var con = mysql.createConnection({
         host: "localhost",
@@ -44,11 +44,11 @@ prompt.question(['Client name', 'Local dev url',  'Database name', 'Database pas
         readWriteSync();
   			// cmd.run('mysql -u root -p ' + dbName + ' < craftyons/database.sql')
         log(rule);
-  			log(chalk.blue('Now run the command below to import the Craftyons database into ' + CraftyonsApp.dbName + ':'));
-  			// log(chalk.blue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + CraftyonsApp.dbPassword));
+        log(chalk.blue('Now run the command below to import the Craftyons database into the ' + CraftyonsApp.dbName + ' database:'));
+  			log(chalk.blue('Note: you will be asked for MySQL\'s root user password again, derp... it\'s: ' + CraftyonsApp.dbPassword));
   			log(rule);
-  			log(chalk.red('mysql -u root -p ' + CraftyonsApp.dbName + ' < database.sql && valet link ' + CraftyonsApp.devUrl +' && valet secure && valet open && gulp'));
-        cmd.run('Press control C to exit the prompt. Sorry I am not clever enough to do this for you... yet');
+  			log(chalk.red('mysql -u root -p ' + CraftyonsApp.dbName + ' < database.sql && valet link ' + CraftyonsApp.devUrl +' && valet open && gulp'));
+        cmd.run('Press control+C to exit the prompt. Sorry I am not clever enough to do this for you... yet');
         process.exit();
       });
       // console.log(chalk.bgCyan('Database name:', results.databaseUsername));
